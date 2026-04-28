@@ -397,6 +397,12 @@
 
 // console.log(UnifyStringArray(['Ciao', 'a', 'tutti', 'come', 'va', '?']));
 
-const Verifylength = (parola, lunghezza) => parola.length > lunghezza;
+// const Verifylength = (parola, lunghezza) => parola.length > lunghezza;
 
-console.log(Verifylength('Broccolo', 10));
+// console.log(Verifylength('Broccolo', 10));
+
+// const array1 = [1,2,3,4,5]
+
+let email = document.getElementById('email');
+
+let password = document.getElementById('password');
