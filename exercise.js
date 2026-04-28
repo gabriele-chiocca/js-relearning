@@ -403,6 +403,30 @@
 
 // const array1 = [1,2,3,4,5]
 
-let email = document.getElementById('email');
+const form = document.getElementById('loginForm');
 
-let password = document.getElementById('password');
+const messaggio = document.getElementById('messaggio');
+
+const button = document.getElementById('btnclassic');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  let formData = new FormData(form);
+
+  let email = formData.get('email');
+  let password = formData.get('password');
+
+  validateData(email, password);
+
+  console.log('Email:', email, 'Password:', password);
+});
+
+function validateData(email, password) {
+  if (email === '' || password === '') {
+    messaggio.textContent = 'Tutti i campi devono essere riempiti';
+    event.preventDefault();
+  } else {
+    messaggio.textContent = '';
+  }
+}

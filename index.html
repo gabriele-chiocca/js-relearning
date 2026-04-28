@@ -16,27 +16,35 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <script src="exercise.js" defer></script>
   </head>
 
   <body>
-    <script src="exercise.js"></script>
+    <form id="loginForm" action="">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Inserisci la tua mail"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Inserisci la tua password"
+        />
+      </div>
 
-    <form action="">
-      <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="Inserisci la tua mail"
-      />
-
-      <input
-        type="password"
-        name="password"
-        id="password"
-        placeholder="Inserisci la tua password"
-      />
-
-      <button class="btn btn-primary">Invia</button>
+      <button id="btnclassic" type="submit" class="btn btn-primary">
+        Invia
+      </button>
     </form>
+    <p id="messaggio"></p>
   </body>
 </html>
