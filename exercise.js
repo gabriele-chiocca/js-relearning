@@ -473,47 +473,57 @@
 
 // console.log(arrayStryinga.toLowerCase());
 
-const giocatore1 = {
-  nome: 'xCarlo03',
-};
+// const giocatore1 = {
+//   nome: 'xCarlo03',
+// };
 
-const giocatore2 = {
-  nome: 'LucaRossixPlays',
-};
+// const giocatore2 = {
+//   nome: 'LucaRossixPlays',
+// };
 
-const partitaonline = {
-  giocatori: [],
+// const partitaonline = {
+//   giocatori: [],
 
-  disconnetti: function (giocatore) {
-    const index = this.giocatori.indexOf(giocatore);
+//   disconnetti: function (giocatore) {
+//     const index = this.giocatori.indexOf(giocatore);
 
-    this.giocatori.splice(index, 1);
+//     this.giocatori.splice(index, 1);
 
-    console.log(`il seguente giocatore: ${giocatore.nome} è stato disconnesso`);
+//     console.log(`il seguente giocatore: ${giocatore.nome} è stato disconnesso`);
 
-    this.mostraGiocatori();
-  },
+//     this.mostraGiocatori();
+//   },
 
-  connetti: function (giocatore) {
-    this.giocatori.push(giocatore);
-    console.log(`il seguente giocatore: ${giocatore.nome} si è connesso`);
-    this.mostraGiocatori();
-  },
+//   connetti: function (giocatore) {
+//     this.giocatori.push(giocatore);
+//     console.log(`il seguente giocatore: ${giocatore.nome} si è connesso`);
+//     this.mostraGiocatori();
+//   },
 
-  mostraGiocatori: function () {
-    console.log(
-      this.giocatori.length == 0
-        ? 'Non ci sono giocatori'
-        : this.giocatori.map((giocatore) => giocatore.nome).join(','),
-    );
-  },
-};
+//   mostraGiocatori: function () {
+//     console.log(
+//       this.giocatori.length == 0
+//         ? 'Non ci sono giocatori'
+//         : this.giocatori.map((giocatore) => giocatore.nome).join(','),
+//     );
+//   },
+// };
 
-partitaonline.mostraGiocatori();
+// partitaonline.mostraGiocatori();
 
-partitaonline.connetti(giocatore1);
-partitaonline.connetti(giocatore2);
+// partitaonline.connetti(giocatore1);
+// partitaonline.connetti(giocatore2);
 
-partitaonline.disconnetti(giocatore1);
+// partitaonline.disconnetti(giocatore1);
 
-partitaonline.disconnetti(giocatore2);
+// partitaonline.disconnetti(giocatore2);
+
+const dataoggi = new Date();
+
+const nuovaData = new Date(2021, 5, 6, 16, 15, 18);
+
+const differenzaGiorni = Math.floor(
+  (dataoggi - nuovaData) / (1000 * 60 * 60 * 24),
+);
+
+console.log(differenzaGiorni);
