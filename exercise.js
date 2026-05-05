@@ -451,24 +451,66 @@
 //   }
 // });
 
-let codicefiscale = 'RSSAQEQDAJBHWUIQUIR';
+// let codicefiscale = 'RSSAQEQDAJBHWUIQUIR';
 
-const arrayCaratteri = codicefiscale.split('');
+// const arrayCaratteri = codicefiscale.split('');
 
-console.log(arrayCaratteri);
+// console.log(arrayCaratteri);
 
-console.log(arrayCaratteri.length);
+// console.log(arrayCaratteri.length);
 
-console.log(arrayCaratteri.indexOf('Q'));
+// console.log(arrayCaratteri.indexOf('Q'));
 
-console.log(arrayCaratteri.slice(2, 5));
+// console.log(arrayCaratteri.slice(2, 5));
 
-console.log(arrayCaratteri.pop());
+// console.log(arrayCaratteri.pop());
 
-console.log(arrayCaratteri.sort());
+// console.log(arrayCaratteri.sort());
 
-console.log(arrayCaratteri.toString());
+// console.log(arrayCaratteri.toString());
 
-const arrayStryinga = arrayCaratteri.toString();
+// const arrayStryinga = arrayCaratteri.toString();
 
-console.log(arrayStryinga.toLowerCase());
+// console.log(arrayStryinga.toLowerCase());
+
+const giocatore1 = {
+  nome: 'xCarlo03',
+};
+
+const giocatore2 = {
+  nome: 'LucaRossixPlays',
+};
+
+const partitaonline = {
+  giocatori: [],
+
+  disconnetti: function (giocatore) {
+    const index = this.giocatori.indexOf(giocatore);
+
+    this.giocatori.splice(index, 1);
+    this.mostraGiocatori();
+  },
+
+  connetti: function (giocatore) {
+    this.giocatori.push(giocatore);
+    this.mostraGiocatori();
+  },
+
+  mostraGiocatori: function () {
+    console.log(this.giocatori.map((giocatore) => giocatore.nome).join(','));
+  },
+};
+
+partitaonline.connetti(giocatore1);
+partitaonline.connetti(giocatore2);
+
+console.log(partitaonline.giocatori);
+
+partitaonline.disconnetti(giocatore1);
+
+partitaonline.disconnetti(giocatore2);
+
+partitaonline.connetti(giocatore1);
+partitaonline.connetti(giocatore2);
+
+partitaonline.disconnetti(giocatore2);
