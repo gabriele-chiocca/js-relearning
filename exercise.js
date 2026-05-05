@@ -403,30 +403,72 @@
 
 // const array1 = [1,2,3,4,5]
 
-const form = document.getElementById('loginForm');
+// const form = document.getElementById('loginForm');
 
-const messaggio = document.getElementById('messaggio');
+// const messaggio = document.getElementById('messaggio');
 
-const button = document.getElementById('btnclassic');
+// const button = document.getElementById('btnclassic');
 
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
+// form.addEventListener('submit', function (e) {
+//   e.preventDefault();
 
-  let formData = new FormData(form);
+//   let formData = new FormData(form);
 
-  let email = formData.get('email');
-  let password = formData.get('password');
+//   let email = formData.get('email');
+//   let password = formData.get('password');
 
-  validateData(email, password);
+//   validateData(email, password);
 
-  console.log('Email:', email, 'Password:', password);
-});
+//   console.log('Email:', email, 'Password:', password);
+// });
 
-function validateData(email, password) {
-  if (email === '' || password === '') {
-    messaggio.textContent = 'Tutti i campi devono essere riempiti';
-    event.preventDefault();
-  } else {
-    messaggio.textContent = '';
-  }
-}
+// function validateData(email, password) {
+//   if (email === '' || password === '') {
+//     messaggio.textContent = 'Tutti i campi devono essere riempiti';
+
+//     button.classList.add()
+//     event.preventDefault();
+//   } else {
+//     messaggio.textContent = 'Form inviato correttamente';
+//   }
+// }
+
+// var form = document.getElementById('loginForm');
+
+// var messaggio = document.getElementById('messaggio');
+
+// var button = document.getElementById('btnclassic');
+
+// var email = document.getElementById('email');
+
+// var password = document.getElementById('password');
+
+// form.addEventListener('input', function () {
+//   if (email.value === '' || password.value === '') {
+//     button.disabled = true;
+//   } else {
+//     button.disabled = false;
+//   }
+// });
+
+let codicefiscale = 'RSSAQEQDAJBHWUIQUIR';
+
+const arrayCaratteri = codicefiscale.split('');
+
+console.log(arrayCaratteri);
+
+console.log(arrayCaratteri.length);
+
+console.log(arrayCaratteri.indexOf('Q'));
+
+console.log(arrayCaratteri.slice(2, 5));
+
+console.log(arrayCaratteri.pop());
+
+console.log(arrayCaratteri.sort());
+
+console.log(arrayCaratteri.toString());
+
+const arrayStryinga = arrayCaratteri.toString();
+
+console.log(arrayStryinga.toLowerCase());
