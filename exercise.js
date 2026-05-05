@@ -488,29 +488,32 @@ const partitaonline = {
     const index = this.giocatori.indexOf(giocatore);
 
     this.giocatori.splice(index, 1);
+
+    console.log(`il seguente giocatore: ${giocatore.nome} è stato disconnesso`);
+
     this.mostraGiocatori();
   },
 
   connetti: function (giocatore) {
     this.giocatori.push(giocatore);
+    console.log(`il seguente giocatore: ${giocatore.nome} si è connesso`);
     this.mostraGiocatori();
   },
 
   mostraGiocatori: function () {
-    console.log(this.giocatori.map((giocatore) => giocatore.nome).join(','));
+    console.log(
+      this.giocatori.length == 0
+        ? 'Non ci sono giocatori'
+        : this.giocatori.map((giocatore) => giocatore.nome).join(','),
+    );
   },
 };
 
+partitaonline.mostraGiocatori();
+
 partitaonline.connetti(giocatore1);
 partitaonline.connetti(giocatore2);
-
-console.log(partitaonline.giocatori);
 
 partitaonline.disconnetti(giocatore1);
-
-partitaonline.disconnetti(giocatore2);
-
-partitaonline.connetti(giocatore1);
-partitaonline.connetti(giocatore2);
 
 partitaonline.disconnetti(giocatore2);
