@@ -623,8 +623,14 @@ for (let numero of numeri) {
 
   const numeroSuccessivo = numeri[indice + 1];
 
+  const stringPrecedente =
+    numeroPrecedente == undefined ? 'Nessun numero' : numeroPrecedente;
+
+  const stringFutura =
+    numeroSuccessivo == undefined ? 'Nessun numero futuro' : numeroSuccessivo;
+
   console.log(
-    `Il numero precedente: ${numeroPrecedente == undefined ? 'Nessun numero' : numeroPrecedente} \n il numero attuale è : ${numeroAttuale}\n il numero futuro è ${numeroSuccessivo == undefined ? 'Nessun numero futuro' : numeroSuccessivo}`,
+    `Il numero precedente: ${stringPrecedente} \n il numero attuale è : ${numeroAttuale}\n il numero futuro è ${stringFutura}`,
   );
 }
 
