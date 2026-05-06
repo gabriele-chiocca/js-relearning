@@ -546,16 +546,32 @@
 
 // player.stats(this.partiteGiocate);
 
-const player = {
-  username: 'Triccio',
-  partiteGiocate: 2,
-  stats: function () {
-    console.log(
-      this.partiteGiocate == 0 || this.partiteGiocate < 0
-        ? 'Non ha giocato partite'
-        : `Ha giocato ${this.partiteGiocate} partite`,
-    );
-  },
-};
+// const player = {
+//   username: 'Triccio',
+//   partiteGiocate: -1,
+//   stats: function () {
+//     console.log(
+//       this.partiteGiocate <= 0
+//         ? 'Non ha giocato partite'
+//         : `Ha giocato ${this.partiteGiocate} partite`,
+//     );
+//   },
+// };
 
-player.stats();
+// player.stats();
+
+const giorno = 'Lunedì';
+
+switch (giorno.toLowerCase()) {
+  case 'lunedì':
+  case 'martedì':
+  case 'mercoledì':
+  case 'giovedì':
+  case 'venerdì':
+    console.log('Giorno lavorativo');
+    break;
+  case 'sabato':
+  case 'domenica':
+    console.log('Giorno festivo');
+    break;
+}
