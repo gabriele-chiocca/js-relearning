@@ -603,7 +603,7 @@
 //   console.log('Contiene numero dispari di elementi');
 // }
 
-const numeri = [1, 2, 3, 4, 5, 6, 7];
+const numeri = [1, 2, 3, 4, 5, 6, 10];
 
 // let somma = 0;
 
@@ -614,24 +614,33 @@ const numeri = [1, 2, 3, 4, 5, 6, 7];
 
 // console.log(somma);
 
-// for (numero of numeri) {
-//   console.log(numero);
-// }
+for (let numero of numeri) {
+  const indice = numeri.indexOf(numero);
+  console.log(
+    `Il numero precedente: ${numeri[indice - 1] == undefined ? 'Nessun numero' : numeri[indice - 1]} \n il numero attuale è : ${numeri[indice]}\n il numero futuro è ${numeri[indice + 1] == undefined ? 'Nessun numero futuro' : numeri[indice + 1]}`,
+  );
+}
 
 // numeri.forEach((element) => {
 //   console.log(element);
 // });
 
-const persona = {
-  nome: 'Gabriele',
-  cognome: 'Chioschio',
-  Età: '15',
-};
+// const persona = {
+//   nome: 'Gabriele',
+//   cognome: 'Chioschio',
+//   Età: '15',
+// };
 
-let chiavi = Object.keys(persona);
+// let chiavi = Object.keys(persona);
 
-for (chiave of chiavi) {
-  console.log(
-    `Ecco la chiave: ${chiave} ed il valore interno: ${persona[chiave]}`,
-  );
-}
+// for (chiave of chiavi) {
+//   console.log(
+//     `Ecco la chiave: ${chiave} ed il valore interno: ${persona[chiave]}`,
+//   );
+// }
+
+// for (let i = 0; i < chiavi.length; i++) {
+//   console.log(
+//     `Ecco la chiave: ${chiavi[i]} ed il valore interno: ${persona[chiavi[i]]}`,
+//   );
+// }
