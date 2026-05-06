@@ -578,16 +578,27 @@
 
 const arrayNum = [1, 10, 20, 40, 50, 60];
 
-console.log(
-  arrayNum.length % 2 == 0
-    ? 'Contiene un numero pari di elementi'
-    : 'Non contiene un numero pari di elementi',
-);
+// console.log(
+//   arrayNum.length % 2 == 0
+//     ? 'Contiene un numero pari di elementi'
+//     : 'Non contiene un numero pari di elementi',
+// );
 
-console.log(
-  arrayNum.length % 2 == 0
-    ? arrayNum[2] == 20
-      ? 'Contiene il numero 20 nella posizione 2'
-      : 'Non contiene il numero 20 nella posizione 2'
-    : 'Non contiene un numero pari di elementi',
-);
+// console.log(
+//   arrayNum.length % 2 == 0
+//     ? arrayNum[2] == 20
+//       ? 'Contiene il numero 20 nella posizione 2'
+//       : 'Non contiene il numero 20 nella posizione 2'
+//     : 'Non contiene un numero pari di elementi',
+// );
+
+if (arrayNum.length % 2 == 0) {
+  console.log('Contiene un numero pari di elementi');
+  if (arrayNum.includes(20) && arrayNum.indexOf(2)) {
+    console.log('Contiene il numero 20 nella posizione 2');
+  } else {
+    console.log('Il numero 20 non è nella posizione 2 ');
+  }
+} else {
+  console.log('Contiene numero dispari di elementi');
+}
