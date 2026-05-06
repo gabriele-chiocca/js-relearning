@@ -560,18 +560,34 @@
 
 // player.stats();
 
-const giorno = 'Lunedì';
+// const giorno = 'Lunedì';
 
-switch (giorno.toLowerCase()) {
-  case 'lunedì':
-  case 'martedì':
-  case 'mercoledì':
-  case 'giovedì':
-  case 'venerdì':
-    console.log('Giorno lavorativo');
-    break;
-  case 'sabato':
-  case 'domenica':
-    console.log('Giorno festivo');
-    break;
-}
+// switch (giorno.toLowerCase()) {
+//   case 'lunedì':
+//   case 'martedì':
+//   case 'mercoledì':
+//   case 'giovedì':
+//   case 'venerdì':
+//     console.log('Giorno lavorativo');
+//     break;
+//   case 'sabato':
+//   case 'domenica':
+//     console.log('Giorno festivo');
+//     break;
+// }
+
+const arrayNum = [1, 10, 20, 40, 50, 60];
+
+console.log(
+  arrayNum.length % 2 == 0
+    ? 'Contiene un numero pari di elementi'
+    : 'Non contiene un numero pari di elementi',
+);
+
+console.log(
+  arrayNum.length % 2 == 0
+    ? arrayNum[2] == 20
+      ? 'Contiene il numero 20 nella posizione 2'
+      : 'Non contiene il numero 20 nella posizione 2'
+    : 'Non contiene un numero pari di elementi',
+);
