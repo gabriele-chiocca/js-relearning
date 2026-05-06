@@ -518,12 +518,34 @@
 
 // partitaonline.disconnetti(giocatore2);
 
-const dataoggi = new Date();
+// const dataoggi = new Date();
 
-const nuovaData = new Date(2021, 5, 6, 16, 15, 18);
+// const nuovaData = new Date(2021, 5, 6, 16, 15, 18);
 
-const differenzaGiorni = Math.floor(
-  (dataoggi - nuovaData) / (1000 * 60 * 60 * 24),
-);
+// const differenzaGiorni = Math.floor(
+//   (dataoggi - nuovaData) / (1000 * 60 * 60 * 24),
+// );
 
-console.log(differenzaGiorni);
+// console.log(differenzaGiorni);
+
+// const x = 6;
+
+// console.log(!(x > 50));
+
+// const player = {
+//   username: 'Triccio',
+//   partiteGiocate: 0,
+//   stats: function () {
+//     if (this.partiteGiocate == 0 || this.partiteGiocate < 0) {
+//       console.log('Non ha ancora giocato');
+//     } else {
+//       console.log('Ha giocato', this.partiteGiocate, 'partite');
+//     }
+//   },
+// };
+
+// player.stats(this.partiteGiocate);
+
+const player = {
+  username: 'Triccio',
+};
