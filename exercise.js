@@ -548,4 +548,14 @@
 
 const player = {
   username: 'Triccio',
+  partiteGiocate: 2,
+  stats: function () {
+    console.log(
+      this.partiteGiocate == 0 || this.partiteGiocate < 0
+        ? 'Non ha giocato partite'
+        : `Ha giocato ${this.partiteGiocate} partite`,
+    );
+  },
 };
+
+player.stats();
