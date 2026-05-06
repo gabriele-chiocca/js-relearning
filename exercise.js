@@ -576,7 +576,7 @@
 //     break;
 // }
 
-const arrayNum = [1, 10, 20, 40, 50, 60];
+// const arrayNum = [1, 10, 20, 40, 50, 60];
 
 // console.log(
 //   arrayNum.length % 2 == 0
@@ -592,13 +592,46 @@ const arrayNum = [1, 10, 20, 40, 50, 60];
 //     : 'Non contiene un numero pari di elementi',
 // );
 
-if (arrayNum.length % 2 == 0) {
-  console.log('Contiene un numero pari di elementi');
-  if (arrayNum.includes(20) && arrayNum.indexOf(2)) {
-    console.log('Contiene il numero 20 nella posizione 2');
-  } else {
-    console.log('Il numero 20 non è nella posizione 2 ');
-  }
-} else {
-  console.log('Contiene numero dispari di elementi');
+// if (arrayNum.length % 2 == 0) {
+//   console.log('Contiene un numero pari di elementi');
+//   if (arrayNum.includes(20) && arrayNum.indexOf(2)) {
+//     console.log('Contiene il numero 20 nella posizione 2');
+//   } else {
+//     console.log('Il numero 20 non è nella posizione 2 ');
+//   }
+// } else {
+//   console.log('Contiene numero dispari di elementi');
+// }
+
+const numeri = [1, 2, 3, 4, 5, 6, 7];
+
+// let somma = 0;
+
+// for (let i = 0; i < numeri.length; i++) {
+//   somma += numeri[i];
+//   console.log(somma);
+// }
+
+// console.log(somma);
+
+// for (numero of numeri) {
+//   console.log(numero);
+// }
+
+// numeri.forEach((element) => {
+//   console.log(element);
+// });
+
+const persona = {
+  nome: 'Gabriele',
+  cognome: 'Chioschio',
+  Età: '15',
+};
+
+let chiavi = Object.keys(persona);
+
+for (chiave of chiavi) {
+  console.log(
+    `Ecco la chiave: ${chiave} ed il valore interno: ${persona[chiave]}`,
+  );
 }
