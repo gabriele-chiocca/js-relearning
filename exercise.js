@@ -616,8 +616,15 @@ const numeri = [1, 2, 3, 4, 5, 6, 10];
 
 for (let numero of numeri) {
   const indice = numeri.indexOf(numero);
+
+  const numeroPrecedente = numeri[indice - 1];
+
+  const numeroAttuale = numeri[indice];
+
+  const numeroSuccessivo = numeri[indice + 1];
+
   console.log(
-    `Il numero precedente: ${numeri[indice - 1] == undefined ? 'Nessun numero' : numeri[indice - 1]} \n il numero attuale è : ${numeri[indice]}\n il numero futuro è ${numeri[indice + 1] == undefined ? 'Nessun numero futuro' : numeri[indice + 1]}`,
+    `Il numero precedente: ${numeroPrecedente == undefined ? 'Nessun numero' : numeroPrecedente} \n il numero attuale è : ${numeroAttuale}\n il numero futuro è ${numeroSuccessivo == undefined ? 'Nessun numero futuro' : numeroSuccessivo}`,
   );
 }
 
