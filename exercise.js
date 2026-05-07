@@ -716,9 +716,8 @@ function sumArray() {
 }
 
 function sommaNumAdArray(x) {
-  console.log('Il totale è', x + sommaArray);
+  const risultato = sumArray(arrayNum) + x;
+  console.log('Il risultato è', risultato);
 }
-
-sumArray(arrayNum);
 
 sommaNumAdArray(num);
