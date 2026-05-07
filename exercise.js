@@ -614,25 +614,25 @@ const numeri = [1, 2, 3, 4, 5, 6, 10];
 
 // console.log(somma);
 
-for (let numero of numeri) {
-  const indice = numeri.indexOf(numero);
+// for (let numero of numeri) {
+//   const indice = numeri.indexOf(numero);
 
-  const numeroPrecedente = numeri[indice - 1];
+//   const numeroPrecedente = numeri[indice - 1];
 
-  const numeroAttuale = numeri[indice];
+//   const numeroAttuale = numeri[indice];
 
-  const numeroSuccessivo = numeri[indice + 1];
+//   const numeroSuccessivo = numeri[indice + 1];
 
-  const stringPrecedente =
-    numeroPrecedente == undefined ? 'Nessun numero' : numeroPrecedente;
+//   const stringPrecedente =
+//     numeroPrecedente == undefined ? 'Nessun numero' : numeroPrecedente;
 
-  const stringFutura =
-    numeroSuccessivo == undefined ? 'Nessun numero futuro' : numeroSuccessivo;
+//   const stringFutura =
+//     numeroSuccessivo == undefined ? 'Nessun numero futuro' : numeroSuccessivo;
 
-  console.log(
-    `Il numero precedente: ${stringPrecedente} \n il numero attuale è : ${numeroAttuale}\n il numero futuro è ${stringFutura}`,
-  );
-}
+//   console.log(
+//     `Il numero precedente: ${stringPrecedente} \n il numero attuale è : ${numeroAttuale}\n il numero futuro è ${stringFutura}`,
+//   );
+// }
 
 // numeri.forEach((element) => {
 //   console.log(element);
@@ -657,3 +657,45 @@ for (let numero of numeri) {
 //     `Ecco la chiave: ${chiavi[i]} ed il valore interno: ${persona[chiavi[i]]}`,
 //   );
 // }
+
+// Object.keys(persona).forEach((chiave) => {
+//   console.log(`Ecco la chiave: ${chiave} ed il valore ${persona[chiave]}`);
+// });
+
+// function somma(x, y) {
+//   return x + y;
+// }
+
+// console.log(somma(5, 10));
+
+// const persona = {
+//   nome: 'Gabri',
+//   cognome: 'Chioscio',
+//   età: 15,
+//   presentazione: function mipresento() {
+//     console.log('Ciao a tutti mi chiamo', this.nome);
+//   },
+// };
+
+// persona.presentazione();
+
+// const persona = {
+//   nome: 'Gabri',
+//   cognome: 'Chioscio',
+//   età: 15,
+//   presentazione: () => {
+//     console.log('Ciao a tutti mi chiamo', persona.nome);
+//   },
+// };
+
+// persona.presentazione();
+
+// const sommaNum = function (x, y) {
+//   return x + y;
+// };
+
+// const SalutaNome = (nome) => {
+//   return console.log('Salve', nome);
+// };
+
+// SalutaNome('Francesco');
