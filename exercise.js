@@ -699,3 +699,26 @@ const numeri = [1, 2, 3, 4, 5, 6, 10];
 // };
 
 // SalutaNome('Francesco');
+
+const arrayNum = [1, 2, 3];
+
+const num = 10;
+
+let sommaArray = 0;
+
+function sumArray() {
+  for (numero of arrayNum) {
+    sommaArray += numero;
+  }
+  console.log(sommaArray);
+
+  return sommaArray;
+}
+
+function sommaNumAdArray(x) {
+  console.log('Il totale è', x + sommaArray);
+}
+
+sumArray(arrayNum);
+
+sommaNumAdArray(num);
