@@ -730,26 +730,43 @@ const modulo = document.getElementById('loginForm');
 
 const input = document.getElementById('input');
 
-modulo.addEventListener('click', (e) => {
+const listempty = document.getElementById('list');
+
+const tasks = [];
+
+modulo.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const answer = SaveAnswer(input);
+  const answer = input.value.trim();
+  if (answer === '') return;
 
-  boxanswer.innerHTML = `<div class="bg-white p-3 answer-bar d-flex rounded">
-          <p>${answer}</p>
+  const newTask = {
+    task: answer,
+    isCompleted: false,
+  };
 
-          <div>
-            <i class="bi bi-check-circle"></i>
-            <i class="bi bi-x-circle"></i>
-          </div>
-        </div>`;
+  tasks.push(newTask);
 
-  console.log('Ciao');
+  renderTasks();
+  input.value = '';
 });
 
-function SaveAnswer(e) {
-  const nuovarisposta = e.target.value;
-  console.log(nuovarisposta);
+function renderTasks() {
+  /** Prendi l'array
+   * potenzialmente fai un ciclo for sull'array e prendi tutti gli elementi di ognuno pushando poi la task
+   * **/
 
-  return;
+  for (let i = 0; i < tasks.length; i++) {
+    listempty.innerHTML += `
+    <li>
+            <div class="bg-white p-3 answer-bar d-flex rounded">
+              <p>${tasks[i].task}</p>
+
+              <div>
+                <i class="bi bi-check-circle"></i>
+                <i class="bi bi-x-circle"></i>
+              </div>
+            </div>
+          </li>`;
+  }
 }

@@ -1,3 +1,13 @@
+/* Reset */
+
+ul,
+ol {
+  margin: auto; /* This Works */
+  padding: 0;
+}
+
+/* CSS */
+
 .box {
   display: flex;
   align-items: center;
