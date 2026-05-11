@@ -18,33 +18,46 @@
     ></script>
 
     <script src="exercise.js" defer></script>
+
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <form id="loginForm" action="">
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Inserisci la tua mail"
-        />
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Inserisci la tua password"
-        />
-      </div>
+    <div class="row">
+      <div class="box my-5">
+        <di class="bg-primary p-5">
+          <form id="loginForm" action="" class="bg-white p-4">
+            <div class="form-group mb-2 ">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Inserisci la tua mail"
+              />
+            </div>
+            <div class="form-group mb-2">
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Inserisci la tua password"
+              />
+            </div>
 
-      <button id="btnclassic" type="submit" class="btn btn-primary" disabled>
-        Invia
-      </button>
-    </form>
-    <p id="messaggio"></p>
+            <button
+              id="btnclassic"
+              type="submit"
+              class="btn btn-primary"
+              disabled
+            >
+              Invia
+            </button>
+          </form>
+          <p id="messaggio"></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
