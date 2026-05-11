@@ -733,18 +733,23 @@ const input = document.getElementById('input');
 modulo.addEventListener('click', (e) => {
   e.preventDefault();
 
-  input.addEventListener('input', (e) => {
-    const nuovarisposta = e.target.value;
+  const answer = SaveAnswer(input);
 
-    boxanswer.innerHTML = `<div class="bg-white p-3 answer-bar d-flex rounded">
-          <p>${nuovarisposta}</p>
+  boxanswer.innerHTML = `<div class="bg-white p-3 answer-bar d-flex rounded">
+          <p>${answer}</p>
 
           <div>
             <i class="bi bi-check-circle"></i>
             <i class="bi bi-x-circle"></i>
           </div>
         </div>`;
-  });
 
   console.log('Ciao');
 });
+
+function SaveAnswer(e) {
+  const nuovarisposta = e.target.value;
+  console.log(nuovarisposta);
+
+  return;
+}
