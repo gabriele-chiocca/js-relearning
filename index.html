@@ -11,6 +11,11 @@
       crossorigin="anonymous"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -22,27 +27,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body class="bg-dark">
     <div class="row">
-      <div class="box my-5">
-        <di class="bg-primary p-5">
-          <form id="loginForm" action="" class="bg-white p-4">
-            <div class="form-group mb-2 ">
-              <label for="email">Email:</label>
+      <div class="col-12 box my-5">
+        <div class="bg-primary p-5 rounded">
+          <form id="loginForm" action="" class="bg-white p-4 rounded">
+            <div class="form-group mb-3">
+              <label class="from-label mb-2 h4" for="email">TO DO LIST</label>
               <input
                 type="email"
                 name="email"
                 id="email"
-                placeholder="Inserisci la tua mail"
-              />
-            </div>
-            <div class="form-group mb-2">
-              <label for="password">Password:</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Inserisci la tua password"
+                placeholder="Inserisci il tuo to do"
+                class="form-control"
               />
             </div>
 
@@ -56,6 +53,16 @@
             </button>
           </form>
           <p id="messaggio"></p>
+        </div>
+      </div>
+      <div class="col-12 box" id="boxrisposte">
+        <div class="bg-white p-3 answer-bar d-flex rounded">
+          <p>Ciao a tutti</p>
+
+          <div>
+            <i class="bi bi-check-circle"></i>
+            <i class="bi bi-x-circle"></i>
+          </div>
         </div>
       </div>
     </div>

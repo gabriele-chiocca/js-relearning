@@ -3,3 +3,10 @@
   align-items: center;
   justify-content: center;
 }
+
+.answer-bar {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+}

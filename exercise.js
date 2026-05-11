@@ -603,7 +603,7 @@
 //   console.log('Contiene numero dispari di elementi');
 // }
 
-const numeri = [1, 2, 3, 4, 5, 6, 10];
+// const numeri = [1, 2, 3, 4, 5, 6, 10];
 
 // let somma = 0;
 
@@ -721,3 +721,5 @@ const numeri = [1, 2, 3, 4, 5, 6, 10];
 // }
 
 // sommaNumAdArray(num);
+
+const boxanswer = document.getElementById('boxrisposte');
