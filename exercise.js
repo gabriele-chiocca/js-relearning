@@ -743,6 +743,7 @@ modulo.addEventListener('submit', (e) => {
   const newTask = {
     task: answer,
     isCompleted: false,
+    id: generateId(),
   };
 
   tasks.push(newTask);
@@ -757,7 +758,7 @@ function renderTasks() {
    * **/
 
   for (let i = 0; i < tasks.length; i++) {
-    listempty.innerHTML += `
+    listempty.innerHTML = `
     <li>
             <div class="bg-white p-3 answer-bar d-flex rounded">
               <p>${tasks[i].task}</p>
@@ -769,4 +770,8 @@ function renderTasks() {
             </div>
           </li>`;
   }
+}
+
+function generateId() {
+  return '-' + Math.floor(Math.random() * (10 - 1) + 1);
 }
