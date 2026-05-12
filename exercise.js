@@ -816,7 +816,7 @@ function deleteTask(arr, id) {
 function completeTask(arr, id) {
   const correctArray = arr.findIndex((task) => task.id === id);
 
-  tasks[correctArray].isCompleted = true;
+  tasks[correctArray].isCompleted = !tasks[correctArray].isCompleted;
 
   renderTasks();
 }
