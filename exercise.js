@@ -787,6 +787,23 @@ function renderTasks() {
   }
 }
 
+tasklist.addEventListener('click', function (event) {
+  const target = event.target;
+
+  if (target.classList.contains('delete-btn')) {
+    const taskId = target.dataset.id;
+    deleteTask(taskId);
+  } else if (target.classList.contains('complete-btn')) {
+    const taskId = target.dataset.id;
+    toggleComplete(taskId);
+  }
+});
+
+function deleteTask(task) {
+  let deleted = delete tasks[task];
+  console.log('Array aggiornato', tasks);
+}
+
 function generateId() {
   return '-' + Math.floor(Math.random() * (10 - 1) + 1);
 }
