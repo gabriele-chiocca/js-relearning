@@ -766,8 +766,8 @@ function renderTasks() {
               <p class="text-decoration-line-through">${tasks[i].task}</p>
 
               <div>
-                <i class="bi bi-check-circle"></i>
-                <i class="bi bi-x-circle"></i>
+                <button class="bi bi-check-circle complete-btn" data-id=${tasks[i].id}></button>
+                <button class="bi bi-x-circle delete-btn" data-id=${tasks[i].id}></button>
               </div>
             </div>
           </li>`;
@@ -778,8 +778,8 @@ function renderTasks() {
               <p class="">${tasks[i].task}</p>
 
               <div>
-                <i class="bi bi-check-circle"></i>
-                <i class="bi bi-x-circle"></i>
+                <button class="bi bi-check-circle complete-btn " data-id=${tasks[i].id}></button>
+                <button class="bi bi-x-circle delete-btn" data-id=${tasks[i].id}></button>
               </div>
             </div>
           </li>`;
@@ -787,21 +787,35 @@ function renderTasks() {
   }
 }
 
-tasklist.addEventListener('click', function (event) {
+listempty.addEventListener('click', function (event) {
   const target = event.target;
+  console.log('Yaaaaaa');
 
   if (target.classList.contains('delete-btn')) {
     const taskId = target.dataset.id;
-    deleteTask(taskId);
+    deleteTask(tasks, taskId);
   } else if (target.classList.contains('complete-btn')) {
     const taskId = target.dataset.id;
-    toggleComplete(taskId);
+
+    completeTask(tasks, taskId);
   }
 });
 
-function deleteTask(task) {
-  let deleted = delete tasks[task];
+function deleteTask(arr, id) {
+  const taskwithIndex = arr.findIndex((task) => task.id === id);
+
+  arr.splice(taskwithIndex, 1);
+
+  renderTasks();
   console.log('Array aggiornato', tasks);
+}
+
+function completeTask(arr, id) {
+  const correctArray = arr.findIndex((task) => task.id === id);
+
+  tasks[correctArray].isCompleted = true;
+
+  renderTasks();
 }
 
 function generateId() {
