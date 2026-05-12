@@ -756,12 +756,14 @@ function renderTasks() {
   /** Prendi l'array
    * potenzialmente fai un ciclo for sull'array e prendi tutti gli elementi di ognuno pushando poi la task
    * **/
+  listempty.innerHTML = '';
 
   for (let i = 0; i < tasks.length; i++) {
-    listempty.innerHTML = `
-    <li>
-            <div class="bg-white p-3 answer-bar d-flex rounded">
-              <p>${tasks[i].task}</p>
+    if (tasks[i].isCompleted === true) {
+      listempty.innerHTML += `
+    <li class= "mt-3">
+            <div class="bg-secondary p-3 answer-bar d-flex rounded">
+              <p class="text-decoration-line-through">${tasks[i].task}</p>
 
               <div>
                 <i class="bi bi-check-circle"></i>
@@ -769,6 +771,19 @@ function renderTasks() {
               </div>
             </div>
           </li>`;
+    } else {
+      listempty.innerHTML += `
+    <li class= "mt-3">
+            <div class="bg-white p-3 answer-bar d-flex rounded">
+              <p class="">${tasks[i].task}</p>
+
+              <div>
+                <i class="bi bi-check-circle"></i>
+                <i class="bi bi-x-circle"></i>
+              </div>
+            </div>
+          </li>`;
+    }
   }
 }
 
