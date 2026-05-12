@@ -787,6 +787,7 @@ function renderTasks() {
   }
 }
 
+//Evento per il click sui button di conferma o elimina
 listempty.addEventListener('click', function (event) {
   const target = event.target;
   console.log('Yaaaaaa');
@@ -801,6 +802,7 @@ listempty.addEventListener('click', function (event) {
   }
 });
 
+// Funzione per eliminare i task al click
 function deleteTask(arr, id) {
   const taskwithIndex = arr.findIndex((task) => task.id === id);
 
@@ -810,6 +812,7 @@ function deleteTask(arr, id) {
   console.log('Array aggiornato', tasks);
 }
 
+// Funzione per i task completati al click
 function completeTask(arr, id) {
   const correctArray = arr.findIndex((task) => task.id === id);
 
@@ -818,6 +821,7 @@ function completeTask(arr, id) {
   renderTasks();
 }
 
+// Funzione per generare id casuali in modo da riprenderseli
 function generateId() {
   return '-' + Math.floor(Math.random() * (10 - 1) + 1);
 }
